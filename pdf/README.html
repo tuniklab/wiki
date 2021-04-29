@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Tuniklab VR Experiment Suite</h1>
+<p>Welcome to the Tunik Lab README! Enclosed are a series of brief descriptions of the various components of the lab and the VR Experiment Suite you will be working with.</p>
+<p>The main resource for your time here in the Tunik Lab will be the Unity program, currently called the Tuniklab VR Experiment Launcher (VEL for short). It combines information from PPT cameras, a Cyberglove, Intersense trackers, and an Inertia cube to generate a hand that should look and behave similarly to your own. We use this hand to run trials, constructed in the Tuniklab VR Experiment Creator (VEC for short), which use all of the above information to change the virtual reality scene. Pretty cool, right?</p>
+<p><em>A quick note before you delve into the various resources below: Things with heading that mention development are meant to be directed only towards readers who have a programming background and are looking to extend the functionality of the Tuniklab VR Experiment Suite</em></p>
+<hr />
+<h2>The Tuniklab VR Experiment Creator (VEC)</h2>
+<h3>Config Creation:</h3>
+<p>The Tuniklab VR Experiment Creator is the tool that you, or other researchers will be using to build the trials that participants will be undertaking. You can use the VEC to set how many fine grained details about the trials, as well as simple things such as how many objects you want in a scene, where you want them, and how you want them to change over the course of the experiment or trials. This is also where you set basic identification information about the experiment, such as the name of the participant and where you want the captured data to be stored when the experiment is completed.</p>
+<p>The VEC is split up into 3 tabs:</p>
+<h4>Peripheral Tab:</h4>
+<p>This tab allows you to specify device and general configuration settings, such as what devices and triggers will be enabled for any part of the experiment, as well as if you'd like to use specific experiment-wide functionality.</p>
+<h4>Environment Tab:</h4>
+<p>This tab allows you to specify parameters about the virtual environment across all trials. It also allows you to define rough details about the unique objects that you will use in the experiment.</p>
+<h4>Experiment Tab:</h4>
+<p>This tab allows you to specify the nitty-gritty details of each trial, and all objects, triggers, and interactions within them. See the <strong>Glossary of Experiment Table Fields</strong> below for more information on this tab.</p>
+<p>The best way to get familiar with these tabs is to explore the VEC yourself! Most fields and options should have accurate labels.</p>
+<p>Following completion of all tabs, you should make sure to save the config in a memorable location so that it can be used in the Tuniklab VR Experiment Launcher to run virtual reality experiments! Currently, the config file is saved as a json file, and can be values can be quick edited from any text editor (as long as you are careful). Alternatively, you can load the file using the VEC and make changes there (making sure to save after all changes).</p>
+<h3>Glossary of Experiment Table Fields</h3>
+<p><strong>Break Trial? (bool):</strong> Specifies whether or not this trial should be set as a break (no data recorded and limited trial functionality)</p>
+<p><strong>Duration (seconds):</strong> The time that this trial will run</p>
+<p><strong>Condition Name (string):</strong> The name of this trial, can be used to specify what condition is being tested as the participant shouldn't be able to see this name</p>
+<h4>Cue</h4>
+<p><strong>Text (string):</strong> The text that will appear as the cue</p>
+<p><strong>Duration (string):</strong> The duration that the cue text will appear for</p>
+<p><strong>Delay (seconds):</strong> The delay from the beginning of the trial before the Cue Text will appear</p>
+<h4>Finger Angle Gain</h4>
+<p><strong>Gain (float):</strong> [0-inf) The proportion of finger angle change that translates to the VR model. 1 is normal movement.</p>
+<h4>PPT Gain</h4>
+<p><strong>Gain (float):</strong> [0-inf) The proportion of hand position change that translates to the VR model. 1 is normal movement.</p>
+<h4>Orientation Gain</h4>
+<p><strong>Gain (float):</strong> [0-inf) The proportion of hand orientation change that translates to the VR model. 1 is normal movement.</p>
+<h4>Object Grab</h4>
+<p><strong>Color:</strong> The color that an object will change to when grabbed by the CyberGlove</p>
+<h4>Position Trigger</h4>
+<p><strong>X (centimeters):</strong> The displacement in the x direction that must be reached (in addition to pos y and pos z) to fire the trigger</p>
+<p><strong>Y (centimeters):</strong> The displacement in the y direction that must be reached (in addition to pos x and pos z) to fire the trigger</p>
+<p><strong>Z (centimeters):</strong> The displacement in the z direction that must be reached (in addition to pos x and pos y) to fire the trigger</p>
+<h4>Velocity Trigger</h4>
+<p><strong>X (centimeters/second):</strong> The velocity in the x direction that must be reached (in addition to vel y and vel z) to fire the trigger</p>
+<p><strong>Y (centimeters/second):</strong> The velocity in the y direction that must be reached (in addition to vel x and vel z) to fire the trigger</p>
+<p><strong>Z (centimeters/second):</strong> The velocity in the z direction that must be reached (in addition to vel x and vel y) to fire the trigger</p>
+<h4>Aperture Trigger</h4>
+<p><strong>finger 1:</strong> The first finger to use for aperture triggering</p>
+<p><strong>finger 2:</strong> The second finger to use for aperture triggering</p>
+<p><strong>distance (centimeters):</strong> The distance that must be reached between finger 1 and finger 2 to fire the trigger</p>
+<h4>Finger Angle Trigger</h4>
+<p><strong>finger:</strong> The finger whose joint angle will be measured</p>
+<p><strong>joint:</strong> The joint whose angle will be measured</p>
+<p><strong>angle (degrees):</strong> The angle that must be reached to fire the trigger. 0 angles are a flat hand</p>
+<h4>Orientation Trigger</h4>
+<p><strong>pitch (degrees):</strong> The pitch that must be reached (in addition to roll and yaw) with the orientation sensor on the hand to fire the trigger</p>
+<p><strong>roll (degrees):</strong> The roll that must be reached (in addition to pitch and yaw) with the orientation sensor on the hand to fire the trigger</p>
+<p><strong>yaw (degrees):</strong> The yaw that must be reached (in addition to pitch and roll) with the orientation sensor on the hand to fire the trigger</p>
+<h4>DAQ</h4>
+<p><strong>React to (trigger):</strong> The trigger which should trigger a pulse to be sent to the DAQ. <strong>Note: Can be left blank for no trigger on this trial</strong></p>
+<p><strong>Pulse Delay (seconds):</strong> The time after the trigger has occurred before the DAQ should send a pulse</p>
+<p><strong>Pulse Channel:</strong> The channel of the DAQ that the pulse should be sent to</p>
+<h4>Object General Parameters</h4>
+<p><strong>Shape:</strong> The shape of this object in the scene</p>
+<p><strong>Dimensions:</strong> The size of the shape. <strong>Format of this field is dependent on shape:</strong></p>
+<ul>
+<li>Rectangular Prism: l,w,h</li>
+<li>Sphere: r</li>
+<li>Cylinder: r,h</li>
+</ul>
+<p><strong>Color:</strong> The color of this object in the scene</p>
+<p><strong>Position X (centimeters):</strong> The position of the center of the object from the origin in the X direction</p>
+<p><strong>Position Y (centimeters):</strong> The position of the center of the object from the origin in the Y direction</p>
+<p><strong>Position Z (centimeters):</strong> The position of the center of the object from the origin in the Z direction</p>
+<p><strong>Euler Rotation X (degrees):</strong> The rotation of the object in the X direction</p>
+<p><strong>Euler Rotation Y (degrees):</strong> The rotation of the object in the Y direction</p>
+<p><strong>Euler Rotation Z (degrees):</strong> The rotation of the object in the Z direction</p>
+<h4>Object Physics Properties</h4>
+<p><strong>Mass (float):</strong> (0-inf) The mass of the object. Smaller mass equates to a lighter object, and a larger mass equates to a heavier object.</p>
+<p><strong>Drag (float):</strong> (0-inf) The linear drag coefficient. Higher drag means that the object's movement will 'slow down' faster.</p>
+<p><strong>Angular Drag (float):</strong> (0-inf) The angular drag coefficient. Higher drag means that the object's rotation will slow down faster.</p>
+<p><strong>Static Friction (float):</strong> [0-1] The friction coefficient to use when at rest. A value of 0 is like ice, while a value of 1 will make it hard to get the object moving.</p>
+<p><strong>Dynamic Friction (float):</strong> [0-1] The friction coefficient to use when already moving. A value of 0 is like ice, while a value of 1 will make the object come to rest very quickly without a strong force behind it.</p>
+<p><strong>Bounciness (float):</strong> [0-1] Determines how bouncy the object is. A value of 0 will not bounce, while a value of 1 will bounce without any loss of energy.</p>
+<h4>Object Perturbation</h4>
+<p><strong>Perturbed By (trigger):</strong> The trigger by which this object will be perturbed <strong>Note: Can be left blank for no trigger on this trial</strong></p>
+<p><strong>Delay (seconds):</strong> The amount of time between when the trigger is activated and when the perturbation will occur</p>
+<p><strong><em>Note: Subsequent object post-perturbation parameters mirror those spec'd out above.</em></strong></p>
+<h3>VEC Development:</h3>
+<ol>
+<li>
+In order to develop you need the following installed:
+<ul>
+<li><a href="https://www.python.org/downloads/release/python-2712/">Python 2.7</a> (https://www.python.org/downloads/release/python-2712/)</li>
+<li><a href="https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/">pyQt4</a> (https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/)</li>
+<li>A python editor (preferably <a href="https://www.jetbrains.com/pycharm/download/#section=windows">PyCharm Community Edition</a>: https://www.jetbrains.com/pycharm/download/#section=windows)</li>
+<li>jsonpickle, which can be downloaded from the package manager built into pycharm</li>
+</ul>
+</li>
+<li>After installing the above, you should be able to open the Rev1 folder in the repo as a PyCharm project. You may need to configure the python interpreter, but if Python is installed correctly there should be only one option in the interpreter dropdown</li>
+<li>In order to test the GUI, you should be able to run <code>Main.py</code> in PyCharm</li>
+</ol>
+<p>Building an executable:</p>
+<ol>
+<li>
+In addition to everything in the development section, you will also need the following installed:
+<ul>
+<li><a href="https://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/">py2exe</a> (https://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/)</li>
+</ul>
+</li>
+<li>If you need to edit build parameters, you will need to edit setup.py</li>
+<li>
+You should create a run configuration for building an executable:
+<ul>
+<li>The script being run should be setup.py</li>
+<li>The &quot;Script Parameters&quot; field should contain the following: <code>py2exe</code></li>
+</ul>
+</li>
+<li>When you want to create a new version executable, you should update the version number in setup.py, as well as move a copy of the contents of the Executable\CurrentBuild folder into a subfolder of the Executable\Old folder</li>
+<li>Now you should be able to run this configuration any time you want to create an executable. With the current setup configuration, all files that you will need to run the executable (including the executable itself) should show up under the Executable\CurrentBuild folder.</li>
+</ol>
+<p>Note: The current version of py2exe does not allow bundling all dependencies inside of the executable, so you will need all of the contents of the Executable\CurrentBuild folder to properly run the executable</p>
+<hr />
+<h2>Tuniklab VR Experiment Launcher (VEL)</h2>
+<p>You will be using a unique program called the Tuniklab VR Experiment Launcher in order to run Virtual Reality experiments.</p>
+<p>This program is built using a game engine named &quot;Unity&quot;, and it holds all of the models, scripts, and information you need to actually make things run in virtual reality.</p>
+<p>When starting up the program, you will be required to select a config file to load. This should be a json file created in the Tuniklab VR Experiment Creator, detailed above.</p>
+<h3>VEL Calibration</h3>
+<p>Each time the VEL is run, you must calibrate certain parts of the environment to provide a realistic experience and accurate data.</p>
+<p>Generally, you as the experimenter should be following the steps left to right on the screen.</p>
+<ol>
+<li>Recenter Screen: Have the Patient face straight forward with the headset on, then press this button. This calibrates the orientation of the HMD.</li>
+<li>Calibrate Flat: Have the Patient place their hand flat on the table with their fingers together, then press this button. This calibrates the 'zero' position of their finger joints.</li>
+<li>Calibrate Fist: Have the Patient form a tight fist (disregarding thumb), then press this button. This calibrates the '90 degree' position of their finger joints.</li>
+<li>Calibrate Thumb Roll: Have the Patient stretch their hand as far as possible across their palm, then press this button. This calibrates the '90 degree' position of one of the thumb joints.</li>
+<li>Calibrate Thumb Bent: Have the Patient bend their thumb inwards as much as possible, then press this button. This calibrates the '90 degree' position of other thumb joints.</li>
+<li>Calibrate Splayed: Have the Patient place their hand on the table with their fingers spread apart, then press this button. This calibrates the max abduction of the fingers.</li>
+</ol>
+<p>After performing all of these calibration steps, a 'START' button should appear in the lower right of the experimenter UI. Pressing this starts the experiment!</p>
+<h3>VEL Triggers</h3>
+<p>One of the fundamental functions of the VEL the ability to change the environment and objects based on events that occur. We call these 'triggers'. They should be relatively straightforward to understand once you have gotten some experience using the VEC and VEL. There are, however, some caveats with some of the triggers.</p>
+<ul>
+<li>Velocity Trigger: <em>Not implemented</em></li>
+<li>Aperture Trigger: <em>Not currently accurate enough to be useful</em></li>
+<li>Orientation Trigger: Not sensitive to rotation direction (ie. right or left roll)</li>
+<li>Touch Trigger: <em>Not implemented</em></li>
+<li>Force Trigger: <em>Not implemented</em></li>
+</ul>
+<h3>VEL Development</h3>
+<h4>Unity Structure Overview</h4>
+<p><strong>Canvas- World Space</strong></p>
+<p>The World Space canvas describes elements of the UI which are meant to exist in the world. It should only hold things like Text or Images that exist inside the Virtual environment.</p>
+<p><strong>Canvas - Experimenter Only</strong></p>
+<p>The Experimenter Only canvas describes elements of the UI which do not exist in the world and should only be seen by the person running the experiment on the computer, and not visual inside of the headset. It holds any buttons that the experimenter can press, but the functionality for those buttons exists in relevant areas (for example, the “Calibrate Fist/Open” buttons have their functions coded in “Cyber Glove Hands Controller” (Script).</p>
+<p><strong>Game Main Control</strong></p>
+<p>This empty object holds most of the functionality tied to running the trials. It has the script which parses through the information in the GUI (“Store<em>GUI</em>Info”), the script which runs the experiments (“Unity Experiment”), the script which saves an Excel file to the desired location (“Excel_XML”), and the script responsible for triggering events to change the virtual landscape (“Triggers”). </p>
+<p><strong>Lab Room</strong></p>
+<p>This object holds all of the models for the Lab Room environment. In the case where multiple environments are in the project, you would likely want to store all of the objects that compose the room itself under an empty game object. You also may want to consider a roof, if you’re into that sort of thing.</p>
+<p><strong>Player</strong></p>
+<p>This holds all the information regarding the player, including the information on the head position and integrating the information from the PPT cameras. The script that gives control of the position of the head to the PPT cameras is “HMD Override.”</p>
+<p><strong>Cyberglove Input</strong></p>
+<p>This object holds the script that converts the information from the Cyberglove application to Unity objects and information (“Cyber Glove Input”). For the Cyberglove to be properly used, the Device Configuration Utility (or DCU) needs to be running and the device needs to be connected. </p>
+<p><strong>Intersense Input</strong></p>
+<p>This object holds the script that converts Intersense information to Unity objects and information (“I Sense Sample”). No additional programs need to be running for the Intersense to work.</p>
+<p><strong>PPT Trackers</strong></p>
+<p>This object holds the main scripts for the PPT cameras.</p>
+<p><strong>Cyberglove Hands</strong></p>
+<p>This is the Game Object that holds all of the scripts and the game objects associated with the hand object.  The main script controlling how the hand responds to the inputs from the Cyberglove. There are individual sub-objects for each of the hand, fingers, the palm, and special objects on the tip of each finger for aperture calculations.</p>
+<hr />
+<h2>Virtual Reality Devices</h2>
+<h3>Cyberglove</h3>
+<p>The Cyberglove is a device that is meant to measure all variable joints of the hand to be used by a computer. It uses voltage strips on the back of the glove to calculate the angle of each joint on each finger. To use the glove, you need to turn on the Device Configuration Utility. </p>
+<p>The Device Configuration Utility is a tool provided by CyberGlove Systems to both calibrate the Cyberglove, as well as send information to our virtual reality environment. To start using it, make sure the Cyberglove is plugged into the computer and that the battery connected to it has charge. Then, right click on the hand you want working and hit (Re-)connect. It may take a few tries, and you may have to open and close the application.</p>
+<p>There is a default configuration file personally adjusted by Tunik Lab employees that is currently working that is named defaultConfig.cal in the _TEST2 project folder. This should have the hand looking and behaving visually well in the DCU. In the case that you need to recalibrate the hand, you can do so by going to the Device menu and then “Advanced Calibration.” There, you can individually change the gains and offsets for each joint to make the hand look and behave as realistically as possible. <strong>Important: These calibration values should only be changed if you are experienced with the Cyberglove, and should not need to be changed often/in most cases</strong></p>
+<p>Using the Cyberglove is relatively simple. The Cyberglove unit comes with an attached pack, on which there are two slots- a battery slot, and a mini-USB slot. Connect a battery to the battery slot (batteries are available charging near the Brainsight computer. Make sure to replace the batteries after taking one so there is always one on the charger) and connect the mini-USB slot to the computer. After that, open up the DCU and go through the steps above.</p>
+<h4>Development</h4>
+<p>Cyberglove &quot;Raw&quot; values are pulled through the CyberGloveUnityPlugin, through the get[Left or Right]HandRawData(). The following is the list of indexes:</p>
+<table>
+
+<tr>
+	<th>
+	Index
+	</th>
+	<th>
+	Joint
+	</th>
+</tr>
+<tr>
+	<td>
+	0
+	</td>
+	<td>
+	Thumb Roll Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	1
+	</td>
+	<td>
+	Thumb Inner Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	2
+	</td>
+	<td>
+	Thumb Outer Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	3
+	</td>
+	<td>
+	Thumb-Index Abduction Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	4
+	</td>
+	<td>
+	Index Finger Inner Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	5
+	</td>
+	<td>
+	Index Finger Middle Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	6
+	</td>
+	<td>
+	Index Finger Outer Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	7
+	</td>
+	<td>
+	For some reason, always returns 0
+	</td>
+</tr>
+<tr>
+	<td>
+	8
+	</td>
+	<td>
+	Middle Finger Inner Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	9
+	</td>
+	<td>
+	Middle Finger Middle Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	10
+	</td>
+	<td>
+	Middle Finger Outer Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	11
+	</td>
+	<td>
+	Index-Middle Abduction Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	12
+	</td>
+	<td>
+	Ring Finger Inner Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	13
+	</td>
+	<td>
+	Ring Finger Middle Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	14
+	</td>
+	<td>
+	Ring Finger Outer Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	15
+	</td>
+	<td>
+	Middle-Ring Abduction Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	16
+	</td>
+	<td>
+	Pinky Finger Inner Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	17
+	</td>
+	<td>
+	Pinky Finger Middle Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	18
+	</td>
+	<td>
+	Pinky Finger Outer Joint Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	19
+	</td>
+	<td>
+	Ring-Pinky Abduction Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	20
+	</td>
+	<td>
+	Palm Arch Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	21
+	</td>
+	<td>
+	Wrist Flexion Sensor
+	</td>
+</tr>
+<tr>
+	<td>
+	22
+	</td>
+	<td>
+	Wrist Abduction Sensor
+	</td>
+</tr>
+
+</table>
+<h3>HMD (Oculus Rift DK2)</h3>
+<p>The HMD allows a user to see the environment as if they are a person in the environment. It also gives rudimentary head orientation data. <strong>The Oculus app must be running in order for participants to see properly in the VEL</strong> (albeit, it can be minimized).</p>
+<p>One thing to ensure before allowing a patient to wear the headset is that the &quot;Health and Safety information&quot; screen, which occasionally pops up, has been dispelled. To do this, put on the headset and point the reticle at the box below the warning for a few seconds.</p>
+<p>Because of processing reasons, <strong>the experimenter should not use the Vizard computer for anything other than the VE L when experiments are in progress</strong>, as the VR environment may not render correctly in the headset if the ___ program is minimized or unfocused. This is doubly important because of the input that the &quot;Go Switch&quot; provides, detailed below.  </p>
+<h3>Intersense Inertia-cube 4</h3>
+<p>The Intersense Intertia-Cube 4 is a device that can measure orientation in 3D space along three primary axes - pitch, yaw, and roll. If you are unfamiliar with these axes, there is plenty of documentation about it online. Treat the Intersense like it is an airplane with the &quot;WorldViz&quot; sticker representing the nose of the plane. </p>
+<p>Using the Intersense Inertia-Cube4 is very easy. All you have to do is plug it into the computer, and the Unity project should start responding (as long as you start to play after the cube is connected). There is a device utility for the Intersense that’s currently only on the Vizard computer. It’s in the folder on the desktop marked “Calibration Tools.” It gives you an opportunity to see the raw data coming in from the Intersense. </p>
+<h3>Go Switch</h3>
+<p>The Go Switch is a <a href="http://www.makeymakey.com/">Makey Makey</a> that has been outfitted to send a &quot;Tab&quot; signal when a user presses down on the switch. This allows the VR environment to determine when the user has pressed the switch, and is therefore in a suitable location.</p>
+<p>It is currently attached to the table in a fixed position, and should function normally without any calibration, as long as it's plugged in.</p>
+<p><strong>Note: Because it is programmed to send a &quot;Tab&quot; to the computer whenever a the switch is depressed, it should be unplugged when the VEL is not in use. Users of the Vizard computer should be wary of patients/coworkers pressing the switch when the VEL is not in use if the switch is plugged in.</strong></p>
+<h3>DAQ Card</h3>
+<p>The VEL has the ability to command a DAQ unit to output single analog 5V square waves, provided information is properly entered when creating the config file. In order to properly configure the card, it must be plugged into a USB port on the Vizard computer, and the &quot;Analog output&quot; channel on the card that is specified in the VEC must be hooked up to the device which you'd like to receive the signal.</p>
+<h3>PPT Cameras</h3>
+<p>The PPT cameras are high intensity cameras set up around the VR workstation. We have six of them, and they capture data at 144 hz, and can capture movement as small as millimeters. To turn on the PPT cameras, plug in the power cable with the tag on it. After that, wait four or five minutes and turn on PPT studio, an application on the main computer. Under &quot;File,&quot; click &quot;Load calibration&quot; and look in the folder it takes you to for any file with the word &quot;_LATEST&quot; at the end. This is the current calibration file for the PPT cameras.</p>
+<p>Currently, the PPT system is tracking the head and the wrist. It does this through the small white spheres that can be mounted on the headset &quot;horns&quot; or one the wrist-mounted pad. These two devices both need to be charged. We have several of each, so one tracker of both types should always be charging at the charging area. </p>
+<p>**Note: Occasionally, there will be an <code>opticalheading.dll</code> error which appears in the lower left of PPT Studios N. This seems to appear somewhat randomly. If this appears, please restart the program.</p>
+<h4>Calibration Details</h4>
+<p>You may need to calibrate the PPT cameras occasionally, particularly if you are getting wonky behavior in the VR environment, or if you know they have been moved or bumped.</p>
+<p>In order to calibrate, you first need to start up &quot;PPT Studio N&quot;. With the PPT cameras on (described above) and <strong>ALL TRACKERS AND/OR OBJECTS OFF OF THE EXPERIMENT TABLE</strong>, as well as the lights off to minimize interference, you can begin calibration by clicking the &quot;Calibrate&quot; button, towards the upper left of the main frame in the PPT program.</p>
+<p>You should switch on the calibration rig which is usually stored in the right of the lab table, and place it roughly on the center of the table, ensuring that the axes are pointed in the correct direction. First checking to confirm the calibration rig size is set to &quot;Small&quot;, you should press the &quot;Start Calibration&quot; button. This should begin tracking the calibration rig with the cameras. If any of the cameras on the right show a red dot, you need to re-position the calibration rig and start over. Positioning of the rig is not an exact science, but generally the rig should be seen towards the center of the each camera.</p>
+<p>Once all cameras calibrate to the rig correctly, you need to reset the &quot;zero&quot; point of the cameras back to our accepted zero, which is the front and center divot in the table. <strong>You must do this step in order for the VR program to function normally.</strong> To do this, you should place a hand tracker, which should show as tracker 3, on the table such that the white tracking marker is as close to the zero-divot as possible. You should then record the &quot;X&quot;, &quot;Y&quot;, and &quot;Z&quot; fields of tracker 3 from the &quot;marker data&quot; section of the program, and change the &quot;Global Offset&quot; values to such that they are negated versions of the values that you just recorded (ex: if tracker 3 shows x,y,z: .5,7,-2.3 when placed in the divot after calibration, the Global Offset should be set to x,y,x: -.5,-7,2.3).</p>
+<p>After calibrating and resetting the zeros, you should save the calibration as the date with the string &quot;_LATEST&quot; appended to the end. You should also rename the old calibration to no longer have the &quot;_LATEST&quot; string appended to it.</p>
+<p>Congrats, if you did all of this correctly, the PPT camera systems should be calibrated and functioning correctly! </p>
+<h4>ADDING EXTRA TRACKERS</h4>
+<p>There is rudimentary support for adding more than the necessary trackers to the VEL, purely for data capturing purposes. These will not show in experiments. To add them, you need to configure the 'Marker Id' module on the left side of 'PPT Studios N' to include the extra markers. <strong>Note: After configuring extra markers, you should always restart PPT Studios N before running any experiments. Also, Virtual IDs 1, 2, and 3 are reserved to be used as the two HMD markers and the wrist marker respectively, so please do not remove or change these markers when adding extra.</strong></p>
+<hr />
+<h1>Miscellaneous Notes for Development</h1>
+<h2>Version Control</h2>
+<p>One of the hardest parts about working in software development are the pesky other developers. While you're making changes to the code, they're often changing the same files, maybe even the same lines as you are! How should the computer know which lines of code to run? If people are working are different files, how do we make sure we have the right version of each file in the &quot;master&quot; program that will be run?</p>
+<p>If you've never heard of it before, this is where I introduce version control. Version control is the best solution we have to this issue, and the specific provider of our version control is Github. Github is an online service that lets multiple people work on the same project. It also allows a single user to work on multiple versions of the same project, in case he or she wanted to test different possibilities without having to keep track of changes. </p>
+<p>The tool we use to interact with git is called Git Bash. It simulates a BASH environment, and you interact with it through commands. There are also GUI based tools that you could use if this interface proves too daunting, but your humble README writer had no git BASH experience coming into the project and now can use it well enough. </p>
+<p>There are plenty of great resources to learn about git on the Internet. I won't tell you everything there is to know about git, but I will give you some basics to look deeper into:</p>
+<ul>
+<li><strong>Branches</strong> - a branch is a single avenue of your code. You can have as many branches as you want.</li>
+<li><strong>Master</strong> - the &quot;master&quot; branch is the main branch. Code on master should be well-tested and integrated such that it won't cause an issue with other code in the project.</li>
+<li><strong>Commit</strong> - when you commit your changes, you are saying that it forms the new standard for this branch.</li>
+<li><strong>Checkout</strong> - checkout is the command you use to switch branches.</li>
+<li><strong>Merge</strong> - When you merge two branches, you combine them. As you might expect, there may be conflicts- if one branch says a variable should be 5, and another branch says 6, which do you trust? In these cases, called <strong>merge conflicts</strong>, you'll have to view the file and individually resolve each by choosing which code segments you want and which you don't. You'll know if you resolved all merge conflicts if the Unity project no longer throws errors and runs as expected. </li>
+</ul>
+<p>This has just been a shallow dive into version control, but you should really check it out if you don't know about it already. It'll be useful throughout the rest of your career.</p>
+<h2>Tunik Board</h2>
+<p>If you've ever worked in software development before, then you'll know how useful it is to have an issue board for keeping track of issues that arise during development that you don't have time to fix now. For this, we have what we like to call the &quot;Tunik board,&quot; but what you may have heard of as a scrum board or a task manager. </p>
+<p>The url to access our board is complex and full of vowels in an order that changes when you're not looking, so I personally recommend you use the following <a href="http://tinyurl.com/tunikboard">link</a>. We currently have four categories: Backlog, Todo, In Progress, and Complete. Backlog refers to any problem that you don't have to think about right now, but you don't want to forget to do. Todo refers to problems that we want to have fixed in the near future. In progress is what you are currently working on or currently testing. Complete refers to anything that is happily complete and has been merged to the master branch.</p>
+<p>You will need to be added to the Tunik board. Once you are, you can create new tickets using the easy to use interface. You can tag a problem with any of the tags we've created or add new tags as necessary. You can also assign a problem to a user, either to yourself if you want to take care of it or to another developer if you want to be a bit passive-aggressive (kidding, that's totally allowed).</p>
+<p><strong>FOR ANY QUESTIONS NOT ANSWERED BY GENE OR OTHER PEOPLE IN THE LAB, YOU CAN CONTACT THE CREATORS OF THE VEC AND VEL, AS WELL AS THIS README AT <a href="&#x6d;&#97;&#x69;&#108;t&#111;&#58;&#x68;&#117;&#x6e;&#116;&#x6f;&#111;&#x6e;&#64;&#108;&#x69;&#118;&#101;&#x2e;&#99;&#x6f;&#109;">&#x48;&#x75;&#110;&#x74;&#111;&#x6f;&#110;&#x40;&#108;i&#x76;&#x65;&#46;&#x63;&#x6f;&#x6d;</a> AND <a href="m&#97;&#105;&#x6c;&#116;&#x6f;:&#x62;&#x65;&#x72;&#105;&#110;&#46;&#x73;&#x40;&#x68;u&#x73;&#x6b;&#121;.&#x6e;&#x65;&#x75;&#46;&#101;&#100;&#x75;">&#x42;&#x65;&#x72;i&#x6e;&#46;s&#x40;&#x68;&#117;&#115;&#107;y&#46;&#110;&#x65;&#117;&#46;&#x65;&#100;&#x75;</a></strong></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
